@@ -5,6 +5,8 @@
 
 #include <SFML/Graphics.hpp>
 
+#include "Services.h"
+
 #include "Services/EngineServices/RenderService/RenderObject.h"
 
 class IGameObject

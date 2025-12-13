@@ -73,6 +73,11 @@ void CallService::SetServiceStartupPriority(IService* service, int priority)
 {
 	// Add the provided service with to the service_startup_order CallOrder with the relevant priority
 	service_startup_order.Add(service, priority);
+
+	if (game_time > 0)
+	{
+		service->Start();
+	}
 }
 void CallService::SetServiceTickPriority(IService* service, int priority)
 {
@@ -83,6 +88,11 @@ void CallService::SetObjectStartupPriority(IGameObject* game_object, int priorit
 {
 	// Add the provided service with to the object_startup_order CallOrder with the relevant priority
 	object_startup_order.Add(game_object, priority);
+
+	if (game_time > 0)
+	{
+		game_object->Start();
+	}
 }
 void CallService::SetObjectTickPriority(IGameObject* game_object, int priority)
 {

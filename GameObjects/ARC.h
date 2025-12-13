@@ -10,8 +10,11 @@
 #include <SFML/Graphics.hpp>
 
 #include "Services.h"
+#include "GameServices.h"
 
 #include "GameObjects/GameObjectInterface.h"
+
+#include "GameObjects/Laser.h"
 
 class ARC : public IGameObject
 {

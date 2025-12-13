@@ -7,12 +7,12 @@
 #include <SFML/Graphics.hpp>
 
 #include "Services/ServiceManager.h"
-#include "Services/EngineServices/CallService/CallService.h"
-#include "Services/EngineServices/RenderService/RenderService.h"
-#include "Services/EngineServices/InputService/InputService.h"
-#include "Services/EngineServices/ResourceService/ResourceService.h"
+#include "Services.h"
+#include "GameServices.h"
 
 #include "GameObjects/ARC.h"
+#include "GameObjects/Asteroid.h"
+#include "GameObjects/Laser.h"
 #include "GameObjects/World.h"
 
 constexpr int WINDOW_WIDTH = 1440;
@@ -20,7 +20,7 @@ constexpr int WINDOW_HEIGHT = 1080;
 constexpr int HALF_WIDTH = WINDOW_WIDTH / 2;
 constexpr int HALF_HEIGHT = WINDOW_HEIGHT / 2;
 
-void RegisterGameServices()
+void RegisterEngineServices()
 {
 	// Register Game Services
 	Services().RegisterService<CallService>();
@@ -28,7 +28,7 @@ void RegisterGameServices()
 	Services().RegisterService<InputService>();
 	Services().RegisterService<ResourceService>();
 }
-void SetRunPriorities()
+void SetEngineRunPriorities()
 {
 	// Obtain pointers to registered services
 	CallService* call_service = Services().Get<CallService>();
@@ -55,13 +55,30 @@ void ConfigureGameWindow()
 	render_service->SetWindowTitle("Space Game");
 	render_service->SetWindowBackground(sf::Color(10, 0, 10));
 }
+void RegisterGameServices()
+{
+	Services().RegisterService<PoolService>();
+}
+void SetGameRunPriorities()
+{
+	// Obtain pointers to registered services
+	CallService* call_service = Services().Get<CallService>();
+
+	PoolService* pool_service = Services().Get<PoolService>();
+
+	// Set Startup Priorities
+	call_service->SetServiceStartupPriority(pool_service, CLST_BASIC_SERVICE);
+}
 
 int main()
 {
 	// Setup Game
-	RegisterGameServices();
-	SetRunPriorities();
+	RegisterEngineServices();
+	SetEngineRunPriorities();
 	ConfigureGameWindow();
+
+	RegisterGameServices();
+	SetGameRunPriorities();
 
 	// Build Game Map
 	World world;
@@ -69,6 +86,10 @@ int main()
 
 	ARC arc;
 	arc.SetPosition(sf::Vector2f(HALF_WIDTH, HALF_HEIGHT - 15));
+
+	PoolService* pool_service = Services().Get<PoolService>();
+	Asteroid* asteroid = pool_service->Get<Asteroid>();
+	asteroid->SetPosition(sf::Vector2f(HALF_WIDTH - 300, HALF_HEIGHT - 200));
 
 	// Obtain pointers to services
 	CallService* call_service = Services().Get<CallService>();

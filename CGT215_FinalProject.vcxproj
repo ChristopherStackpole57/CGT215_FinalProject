@@ -130,7 +130,7 @@
     <ClCompile Include="Services\GameServices\AsteroidService\AsteroidService.cpp" />
     <ClCompile Include="GameObjects\Cache.cpp" />
     <ClCompile Include="GameObjects\Asteroid.cpp" />
-    <ClCompile Include="GameObjects\Bullet.cpp" />
+    <ClCompile Include="GameObjects\Laser.cpp" />
     <ClCompile Include="GameObjects\ARC.cpp" />
     <ClCompile Include="GameObjects\SCOOP.cpp" />
     <ClCompile Include="Services\GameServices\PoolService\PoolService.cpp" />
@@ -143,12 +143,15 @@
     <ClCompile Include="Services\EngineServices\InputService\InputService.cpp" />
     <ClCompile Include="GameObjects\World.cpp" />
     <ClCompile Include="GameObjects\SWORD.cpp" />
+    <ClCompile Include="Services\GameServices\SwordService\SwordService.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Forwards\GameServices.h" />
+    <ClInclude Include="Services\GameServices\PoolService\ObjectPool.h" />
     <ClInclude Include="Services\GameServices\AsteroidService\AsteroidService.h" />
     <ClInclude Include="GameObjects\Cache.h" />
     <ClInclude Include="GameObjects\Asteroid.h" />
-    <ClInclude Include="GameObjects\Bullet.h" />
+    <ClInclude Include="GameObjects\Laser.h" />
     <ClInclude Include="Forwards\CallService.h" />
     <ClInclude Include="Forwards\InputService.h" />
     <ClInclude Include="Forwards\RenderService.h" />
@@ -158,6 +161,7 @@
     <ClInclude Include="GameObjects\ARC.h" />
     <ClInclude Include="GameObjects\GameObjectInterface.h" />
     <ClInclude Include="GameObjects\SCOOP.h" />
+    <ClInclude Include="Services\GameServices\PoolService\ObjectPoolInterface.h" />
     <ClInclude Include="Services\GameServices\PoolService\PoolService.h" />
     <ClInclude Include="Services\EngineServices\RenderService\RenderObject.h" />
     <ClInclude Include="Services\EngineServices\ResourceService\ResourceService.h" />
@@ -170,6 +174,7 @@
     <ClInclude Include="Services\ServiceManager.h" />
     <ClInclude Include="GameObjects\World.h" />
     <ClInclude Include="GameObjects\SWORD.h" />
+    <ClInclude Include="Services\GameServices\SwordService\SwordService.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">

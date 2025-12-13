@@ -41,6 +41,10 @@ void RenderService::SetWindowSize(sf::Vector2u new_size)
 {
 	window_size = new_size;
 }
+sf::Vector2u RenderService::GetWindowSize()
+{
+	return window_size;
+}
 void RenderService::SetWindowTitle(sf::String new_title)
 {
 	window_title = new_title;

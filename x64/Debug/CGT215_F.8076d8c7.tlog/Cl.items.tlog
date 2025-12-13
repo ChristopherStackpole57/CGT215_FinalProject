@@ -1,7 +1,7 @@
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\GameServices\AsteroidService\AsteroidService.cpp;C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\x64\Debug\AsteroidService.obj
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Cache.cpp;C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\x64\Debug\Cache.obj
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp;C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\x64\Debug\Asteroid.obj
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Bullet.cpp;C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\x64\Debug\Bullet.obj
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Laser.cpp;C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\x64\Debug\Laser.obj
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\ARC.cpp;C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\x64\Debug\ARC.obj
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SCOOP.cpp;C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\x64\Debug\SCOOP.obj
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\GameServices\PoolService\PoolService.cpp;C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\x64\Debug\PoolService.obj
@@ -14,3 +14,4 @@ C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Service
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\EngineServices\InputService\InputService.cpp;C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\x64\Debug\InputService.obj
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp;C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\x64\Debug\World.obj
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SWORD.cpp;C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\x64\Debug\SWORD.obj
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\GameServices\SwordService\SwordService.cpp;C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\x64\Debug\SwordService.obj

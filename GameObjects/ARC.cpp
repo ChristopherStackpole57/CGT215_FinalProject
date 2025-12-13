@@ -59,7 +59,17 @@ void ARC::Start()
 			{
 				this->debounce = true;
 				shot_time = call_service->GetGameTime();
-				std::cout << "shoot" << std::endl;
+				
+				// Shoot Logic
+				PoolService* pool_service = Services().Get<PoolService>();
+				Laser* laser = pool_service->Get<Laser>();
+				laser->SetPosition(
+					this->position + 
+					sf::Vector2f(0, -1 * this->sprite->getTextureRect().size.y).rotatedBy(
+						this->sprite->getRotation()
+					)
+				);
+				laser->SetRotation(this->sprite->getRotation());
 			}
 			else
 			{
@@ -111,23 +121,28 @@ void ARC::Tick(float dt)
 }
 
 // ARC Behavior
-sf::Angle ARC::GetRotation()
-{
-	return sprite->getRotation();
-}
 void ARC::SetRotation(sf::Angle rotation)
 {
 	sprite->setRotation(rotation);
+}
+sf::Angle ARC::GetRotation()
+{
+	return sprite->getRotation();
 }
 void ARC::Rotate(sf::Angle rotation)
 {
 	sprite->rotate(rotation);
 }
-sf::Vector2f ARC::GetPosition()
-{
-	return position;
-}
 void ARC::SetPosition(sf::Vector2f position)
 {
 	this->position = position;
+
+	if (sprite)
+	{
+		sprite->setPosition(position);
+	}
+}
+sf::Vector2f ARC::GetPosition()
+{
+	return position;
 }

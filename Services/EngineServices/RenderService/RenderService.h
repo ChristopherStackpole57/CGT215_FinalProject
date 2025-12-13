@@ -21,6 +21,7 @@ public:
 	void Tick(float dt) override;
 
 	void SetWindowSize(sf::Vector2u new_size);
+	sf::Vector2u GetWindowSize();
 	void SetWindowTitle(sf::String title);
 	void SetWindowBackground(sf::Color new_color);
 
