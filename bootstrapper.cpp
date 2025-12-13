@@ -13,6 +13,8 @@
 #include "GameObjects/ARC.h"
 #include "GameObjects/Asteroid.h"
 #include "GameObjects/Laser.h"
+#include "GameObjects/SCOOP.h"
+#include "GameObjects/SWORD.h"
 #include "GameObjects/World.h"
 
 constexpr int WINDOW_WIDTH = 1440;
@@ -90,6 +92,12 @@ int main()
 	PoolService* pool_service = Services().Get<PoolService>();
 	Asteroid* asteroid = pool_service->Get<Asteroid>();
 	asteroid->SetPosition(sf::Vector2f(HALF_WIDTH - 300, HALF_HEIGHT - 200));
+
+	//SWORD sword;
+	//sword.SetPosition(sf::Vector2f(1000.f, 400.f));
+
+	//SCOOP scoop;
+	//scoop.SetPosition(sf::Vector2(300.f, 200.f));
 
 	// Obtain pointers to services
 	CallService* call_service = Services().Get<CallService>();
