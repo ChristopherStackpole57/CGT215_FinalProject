@@ -38,29 +38,37 @@ void Asteroid::Start()
 	render_service->RegisterRenderObject(render_object);
 
 	// Update physics body collider
-	body->SetCollider(Circle{ (float)texture_size.x / 2.f });
-
-	// Bind overlap events
-	body->SetOnOverlap(
-		[this](Body& self, Body& other)
-		{
-			IGameObject* other_game_obj = other.GetOwner();
-			if (!other_game_obj) return;
-
-			if (Laser* laser = dynamic_cast<Laser*>(other_game_obj))
+	if (body)
+	{
+		body->SetCollider(Circle{ (float)texture_size.x / 2.f });
+		
+		// Bind overlap events
+		body->SetOnOverlap(
+			[this](Body& self, Body& other)
 			{
-				laser->Shutdown();
-			}
+				IGameObject* other_game_obj = other.GetOwner();
+				if (!other_game_obj) return;
 
-			this->health -= 50.f;
-			if (this->health <= 0)
-			{
-				this->health = 100.f;
 				PoolService* pool_service = Services().Get<PoolService>();
-				pool_service->Release(this);
+				if (Laser* laser = dynamic_cast<Laser*>(other_game_obj))
+				{
+					laser->Shutdown();
+
+					this->health -= 50.f;
+					if (this->health <= 0)
+					{
+						this->health = 100.f;
+						pool_service->Release(this);
+					}
+				}
+				else if (World* world = dynamic_cast<World*>(other_game_obj))
+				{
+					world->Hit();
+					pool_service->Release(this);
+				}
 			}
-		}
-	);
+		);
+	}
 }
 void Asteroid::Shutdown()
 {

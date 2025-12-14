@@ -8,6 +8,7 @@
 #include "GameObjects/GameObjectInterface.h"
 
 #include "GameObjects/Laser.h"
+#include "GameObjects/World.h"
 
 class Asteroid : public IGameObject
 {

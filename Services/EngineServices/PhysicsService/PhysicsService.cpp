@@ -50,7 +50,6 @@ void PhysicsService::Tick(float dt)
 
 			if (overlap)
 			{
-				std::cout << "found overlap" << std::endl;
 				// invoke overlap callbacks
 
 				a.InvokeOverlap(b);

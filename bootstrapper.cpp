@@ -79,7 +79,7 @@ void SetGameRunPriorities()
 	call_service->SetServiceStartupPriority(pool_service, CLST_BASIC_SERVICE);
 	
 	// Set Tick Priorities
-	//call_service->SetServiceTickPriority(asteroid_service, CLT_BASIC);
+	call_service->SetServiceTickPriority(asteroid_service, CLT_BASIC);
 }
 
 int main()
@@ -105,9 +105,9 @@ int main()
 	SCOOP scoop;
 	scoop.SetPosition(sf::Vector2(300.f, 200.f));
 
-	PoolService* pool_service = Services().Get<PoolService>();
-	Asteroid* asteroid = pool_service->Get<Asteroid>();
-	asteroid->SetPosition(sf::Vector2f(100.f, 100.f));
+	//PoolService* pool_service = Services().Get<PoolService>();
+	//Asteroid* asteroid = pool_service->Get<Asteroid>();
+	//asteroid->SetPosition(sf::Vector2f(100.f, 100.f));
 
 	// Obtain pointers to services
 	CallService* call_service = Services().Get<CallService>();
@@ -150,7 +150,6 @@ int main()
 			std::chrono::system_clock::now().time_since_epoch()
 		).count();
 
-		//std::cout << curr_time - prev_time << std::endl;
 		Services().Tick(curr_time - prev_time);
 
 		prev_time = curr_time;

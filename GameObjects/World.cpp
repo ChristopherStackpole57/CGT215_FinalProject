@@ -8,6 +8,9 @@ World::World()
 	CallService* call_service = Services().Get<CallService>();
 	call_service->SetObjectStartupPriority(this, CLST_BASIC_GAMEOBJECT);
 	//call_service->SetObjectTickPriority(this, CLT_BASIC);
+
+	// Create Physics Body
+	this->body = Services().Get<PhysicsService>()->RegisterPhysicsObject(this);
 }
 
 void World::Start()
@@ -26,6 +29,13 @@ void World::Start()
 	
 	RenderService* render_service = Services().Get<RenderService>();
 	render_service->RegisterRenderObject(render_object);
+
+	// Update physics body collider
+	if (body)
+	{
+		std::cout << "set world body collider " << std::endl;
+		body->SetCollider(Circle{ (float)texture_size.x / 2.f });
+	}
 }
 void World::Shutdown()
 {
@@ -47,6 +57,10 @@ void World::SetPosition(sf::Vector2f position)
 	{
 		sprite->setPosition(position);
 	}
+	if (body)
+	{
+		body->SetPosition(position);
+	}
 }
 sf::Vector2f World::GetPosition()
 {
@@ -63,4 +77,13 @@ sf::Vector2f World::GetSize()
 		);
 	}
 	return sf::Vector2f();
+}
+
+void World::Hit()
+{
+	health -= 10.f;
+	if (health <= 0)
+	{
+		std::cout << "game over" << std::endl;
+	}
 }

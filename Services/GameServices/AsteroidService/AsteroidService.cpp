@@ -20,6 +20,7 @@ void AsteroidService::Tick(float dt)
 		// Generate asteroid
 		RenderService* render_service = Services().Get<RenderService>();
 		PoolService* pool_service = Services().Get<PoolService>();
+
 		Asteroid* asteroid = pool_service->Get<Asteroid>();
 
 		int width = render_service->GetWindowSize().x;

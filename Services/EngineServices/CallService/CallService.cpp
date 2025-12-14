@@ -1,5 +1,7 @@
 // Christopher Stackpole, 12/06/2025
 
+#include <iostream>
+
 #include "CallService.h"
 
 std::vector<int> merge_priority_list(std::vector<int> v1, std::vector<int> v2)

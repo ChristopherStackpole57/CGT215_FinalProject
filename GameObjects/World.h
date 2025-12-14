@@ -3,11 +3,7 @@
 #ifndef WORLD_H
 #define WORLD_H
 
-#include "Services/ServiceManager.h"
-#include "Services/EngineServices/CallService/CallService.h"
-#include "Services/EngineServices/RenderService/RenderObject.h"
-#include "Services/EngineServices/RenderService/RenderService.h"
-#include "Services/EngineServices/ResourceService/ResourceService.h"
+#include "Services.h"
 
 #include "GameObjects/GameObjectInterface.h"
 
@@ -24,9 +20,13 @@ public:
 	void SetPosition(sf::Vector2f position) override;
 
 	sf::Vector2f GetSize() override;
+
+	void Hit();
 private:
 	std::unique_ptr<sf::Sprite> sprite;
 	std::string path = "Resources/planet.bmp";
+
+	float health = 100.f;
 };
 
 #endif

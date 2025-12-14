@@ -65,8 +65,6 @@ public:
 	};
 	void Release(T* obj)
 	{
-		//std::cout << "released: " << obj << std::endl;
-
 		free.push_back(obj);
 
 		if (IGameObject* game_obj = dynamic_cast<IGameObject*>(obj))

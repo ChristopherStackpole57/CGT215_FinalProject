@@ -59,7 +59,6 @@ void Laser::Tick(float dt)
 	sf::Vector2u size = render_service->GetWindowSize();
 	if (position.x < 0 || position.x > size.x || position.y < 0 || position.y > size.y)
 	{
-		//std::cout << "laser should release" << std::endl;
 		PoolService* pool_service = Services().Get<PoolService>();
 		pool_service->Release(this);
 	}
