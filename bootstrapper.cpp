@@ -27,6 +27,7 @@ void RegisterEngineServices()
 	// Register Game Services
 	Services().RegisterService<CallService>();
 	Services().RegisterService<RenderService>();
+	Services().RegisterService<PhysicsService>();
 	Services().RegisterService<InputService>();
 	Services().RegisterService<ResourceService>();
 }
@@ -34,18 +35,21 @@ void SetEngineRunPriorities()
 {
 	// Obtain pointers to registered services
 	CallService* call_service = Services().Get<CallService>();
-	RenderService* render_service = Services().Get<RenderService>();
 	InputService* input_service = Services().Get<InputService>();
+	PhysicsService* physics_service = Services().Get<PhysicsService>();
+	RenderService* render_service = Services().Get<RenderService>();
 	ResourceService* resource_service = Services().Get<ResourceService>();
 
 	// Set startup priorities
-	call_service->SetServiceStartupPriority(render_service, CLST_PRELOAD_CACHE);
 	call_service->SetServiceStartupPriority(input_service, CLST_BASIC_SERVICE);
+	call_service->SetServiceStartupPriority(physics_service, CLST_BASIC_SERVICE);
+	call_service->SetServiceStartupPriority(render_service, CLST_PRELOAD_CACHE);
 	call_service->SetServiceStartupPriority(resource_service, CLST_PRELOAD_CACHE);
 
 	// Set tick priorities
-	call_service->SetServiceTickPriority(render_service, CLT_FRAMERENDER);
 	call_service->SetServiceTickPriority(input_service, CLT_PREFRAME);
+	call_service->SetServiceTickPriority(physics_service, CLT_PREFRAME);
+	call_service->SetServiceTickPriority(render_service, CLT_FRAMERENDER);
 	call_service->SetServiceTickPriority(resource_service, CLT_BASIC);
 }
 void ConfigureGameWindow()
@@ -59,6 +63,7 @@ void ConfigureGameWindow()
 }
 void RegisterGameServices()
 {
+	Services().RegisterService<AsteroidService>();
 	Services().RegisterService<PoolService>();
 }
 void SetGameRunPriorities()
@@ -66,10 +71,15 @@ void SetGameRunPriorities()
 	// Obtain pointers to registered services
 	CallService* call_service = Services().Get<CallService>();
 
+	AsteroidService* asteroid_service = Services().Get<AsteroidService>();
 	PoolService* pool_service = Services().Get<PoolService>();
 
 	// Set Startup Priorities
+	call_service->SetServiceStartupPriority(asteroid_service, CLST_BASIC_SERVICE);
 	call_service->SetServiceStartupPriority(pool_service, CLST_BASIC_SERVICE);
+	
+	// Set Tick Priorities
+	call_service->SetServiceTickPriority(asteroid_service, CLT_BASIC);
 }
 
 int main()
@@ -89,15 +99,11 @@ int main()
 	ARC arc;
 	arc.SetPosition(sf::Vector2f(HALF_WIDTH, HALF_HEIGHT - 15));
 
-	PoolService* pool_service = Services().Get<PoolService>();
-	Asteroid* asteroid = pool_service->Get<Asteroid>();
-	asteroid->SetPosition(sf::Vector2f(HALF_WIDTH - 300, HALF_HEIGHT - 200));
+	SWORD sword;
+	sword.SetPosition(sf::Vector2f(1000.f, 400.f));
 
-	//SWORD sword;
-	//sword.SetPosition(sf::Vector2f(1000.f, 400.f));
-
-	//SCOOP scoop;
-	//scoop.SetPosition(sf::Vector2(300.f, 200.f));
+	SCOOP scoop;
+	scoop.SetPosition(sf::Vector2(300.f, 200.f));
 
 	// Obtain pointers to services
 	CallService* call_service = Services().Get<CallService>();

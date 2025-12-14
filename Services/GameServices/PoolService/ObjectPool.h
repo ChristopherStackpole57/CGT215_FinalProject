@@ -6,6 +6,8 @@
 #include <iostream>
 #include <memory>
 
+#include "Services.h"
+
 #include "CallService.h"
 
 #include "Services/GameServices/PoolService/ObjectPoolInterface.h"
@@ -46,6 +48,12 @@ public:
 		{
 			T* obj = free.back();
 			free.pop_back();
+			
+			if (IGameObject* game_obj = dynamic_cast<IGameObject*>(obj))
+			{
+				game_obj->SetActive(true);
+			}
+
 			return obj;
 		}
 		else
@@ -56,8 +64,14 @@ public:
 	void Release(T* obj)
 	{
 		free.push_back(obj);
-	}
 
+		if (IGameObject* game_obj = dynamic_cast<IGameObject*>(obj))
+		{
+			game_obj->SetPosition(sf::Vector2f(0, 0));
+			game_obj->SetVelocity(sf::Vector2f(0, 0));
+			game_obj->SetActive(false);
+		}
+	}
 private:
 	std::vector<std::unique_ptr<T>> objects;
 	std::vector<T*> free;

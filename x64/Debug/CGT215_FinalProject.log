@@ -1,5 +1,22 @@
-﻿  SWORD.cpp
-  bootstrapper.cpp
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\bootstrapper.cpp(144,29): warning C4244: 'argument': conversion from '__int64' to 'float', possible loss of data
-  Generating Code...
+﻿  Asteroid.cpp
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(50,39): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(78,8): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(78,8): warning C4244:         with
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(78,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(78,8): warning C4244:             T=int
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(78,8): warning C4244:         ]
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(78,8): warning C4244:         and
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(78,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(78,8): warning C4244:             T=float
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(78,8): warning C4244:         ]
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(77,8): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(77,8): warning C4244:         with
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(77,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(77,8): warning C4244:             T=int
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(77,8): warning C4244:         ]
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(77,8): warning C4244:         and
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(77,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(77,8): warning C4244:             T=float
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(77,8): warning C4244:         ]
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\GameObjectInterface.h(36,1): warning C4715: 'IGameObject::GetVelocity': not all control paths return a value
   CGT215_FinalProject.vcxproj -> C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\x64\Debug\CGT215_FinalProject.exe

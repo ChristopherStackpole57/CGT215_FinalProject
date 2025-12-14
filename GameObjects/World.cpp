@@ -37,11 +37,6 @@ void World::Tick(float dt)
 }
 
 // World Behavior
-sf::Vector2f World::GetPosition()
-{
-	return position;
-}
-
 void World::SetPosition(sf::Vector2f position)
 {
 	// Set the internally stored position and move the sprite accordingly
@@ -52,4 +47,20 @@ void World::SetPosition(sf::Vector2f position)
 	{
 		sprite->setPosition(position);
 	}
+}
+sf::Vector2f World::GetPosition()
+{
+	return position;
+}
+sf::Vector2f World::GetSize()
+{
+	if (sprite)
+	{
+		sf::Vector2i size = sprite->getTextureRect().size;
+		return sf::Vector2f(
+			size.x,
+			size.y
+		);
+	}
+	return sf::Vector2f();
 }

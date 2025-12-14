@@ -56,3 +56,15 @@ sf::Vector2f SWORD::GetPosition()
 {
 	return position;
 }
+sf::Vector2f SWORD::GetSize()
+{
+	if (sprite)
+	{
+		sf::Vector2i size = sprite->getTextureRect().size;
+		return sf::Vector2f(
+			size.x,
+			size.y
+		);
+	}
+	return sf::Vector2f();
+}

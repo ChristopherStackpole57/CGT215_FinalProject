@@ -25,8 +25,10 @@ public:
 	void Shutdown() override;
 	void Tick(float dt) override;
 
-	sf::Vector2f GetPosition();
-	void SetPosition(sf::Vector2f position);
+	void SetPosition(sf::Vector2f position) override;
+	sf::Vector2f GetPosition() override;
+
+	sf::Vector2f GetSize() override;
 
 	sf::Angle GetRotation();
 	void SetRotation(sf::Angle rotation);

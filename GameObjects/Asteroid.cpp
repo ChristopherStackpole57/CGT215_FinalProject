@@ -8,6 +8,9 @@ Asteroid::Asteroid()
 	CallService* call_service = Services().Get<CallService>();
 	call_service->SetObjectStartupPriority(this, CLST_BASIC_GAMEOBJECT);
 	call_service->SetObjectTickPriority(this, CLT_BASIC);
+
+	// Create physics body
+	this->body = Services().Get<PhysicsService>()->RegisterPhysicsObject(this);
 }
 
 // GameObject Behavior
@@ -40,7 +43,11 @@ void Asteroid::Shutdown()
 }
 void Asteroid::Tick(float dt)
 {
+	position = body->GetPosition();
+	sprite->setPosition(body->GetPosition());
 
+	// Rotate a little bit
+	sprite->rotate(sf::Angle(sf::degrees(0.01)));
 }
 
 // Asteroid Behavior
@@ -52,8 +59,24 @@ void Asteroid::SetPosition(sf::Vector2f position)
 	{
 		sprite->setPosition(position);
 	}
+	if (body)
+	{
+		body->SetPosition(position);
+	}
 }
 sf::Vector2f Asteroid::GetPosition()
 {
 	return position;
+}
+sf::Vector2f Asteroid::GetSize()
+{
+	if (sprite)
+	{
+		sf::Vector2i size = sprite->getTextureRect().size;
+		return sf::Vector2f(
+			size.x,
+			size.y
+		);
+	}
+	return sf::Vector2f();
 }

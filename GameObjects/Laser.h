@@ -4,6 +4,7 @@
 #define LASER_H
 
 #include "Services.h"
+#include "GameServices.h"
 
 #include "GameObjects/GameObjectInterface.h"
 
@@ -18,6 +19,7 @@ public:
 
 	void SetPosition(sf::Vector2f position) override;
 	sf::Vector2f GetPosition() override;
+	sf::Vector2f GetSize() override;
 	void SetRotation(sf::Angle angle);
 private:
 	std::unique_ptr<sf::Sprite> sprite;

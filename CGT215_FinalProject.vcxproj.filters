@@ -15,99 +15,28 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="bootstrapper.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Services\EngineServices\RenderService\RenderService.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Services\EngineServices\InputService\InputService.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Services\EngineServices\AudioService\AudioService.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Services\EngineServices\CallService\CallService.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Services\ServiceManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Services\EngineServices\ResourceService\ResourceService.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObjects\World.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObjects\ARC.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObjects\Laser.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObjects\Asteroid.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObjects\SCOOP.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObjects\SWORD.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObjects\Cache.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Services\GameServices\PoolService\PoolService.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Services\GameServices\AsteroidService\AsteroidService.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Services\GameServices\SwordService\SwordService.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <None Include="README.md" />
+    <None Include="SFPhysics\packages.config" />
+    <None Include="SFPhysics\SFPhysics.vcxproj" />
+    <None Include="SFPhysics\SFPhysics.vcxproj.filters" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Services\ServiceManager.h">
+    <Text Include="Services\EngineServices\CallService\Org.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Forwards\CallService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Services\EngineServices\RenderService\RenderService.h">
+    <ClInclude Include="Forwards\GameServices.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Services\EngineServices\InputService\InputService.h">
+    <ClInclude Include="Forwards\InputService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Services\ServiceInterface.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Services\EngineServices\AudioService\AudioService.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Services\EngineServices\CallService\CallService.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Services\EngineServices\CallService\CallOrder.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObjects\GameObjectInterface.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Services\EngineServices\ResourceService\ResourceService.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Services\EngineServices\RenderService\RenderObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObjects\World.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObjects\ARC.h">
+    <ClInclude Include="Forwards\PhysicsService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Forwards\RenderService.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Forwards\CallService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Forwards\ResourceService.h">
@@ -119,13 +48,19 @@
     <ClInclude Include="Forwards\Services.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Forwards\InputService.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObjects\Laser.h">
+    <ClInclude Include="GameObjects\ARC.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GameObjects\Asteroid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\Cache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\GameObjectInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\Laser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GameObjects\SCOOP.h">
@@ -134,10 +69,37 @@
     <ClInclude Include="GameObjects\SWORD.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GameObjects\Cache.h">
+    <ClInclude Include="GameObjects\World.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Services\GameServices\PoolService\PoolService.h">
+    <ClInclude Include="Services\EngineServices\AudioService\AudioService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Services\EngineServices\CallService\CallOrder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Services\EngineServices\CallService\CallService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Services\EngineServices\InputService\InputService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Services\EngineServices\PhysicsService\Body.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Services\EngineServices\PhysicsService\Bounds.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Services\EngineServices\PhysicsService\PhysicsService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Services\EngineServices\RenderService\RenderObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Services\EngineServices\RenderService\RenderService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Services\EngineServices\ResourceService\ResourceService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Services\GameServices\AsteroidService\AsteroidService.h">
@@ -149,17 +111,79 @@
     <ClInclude Include="Services\GameServices\PoolService\ObjectPoolInterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Forwards\GameServices.h">
+    <ClInclude Include="Services\GameServices\PoolService\PoolService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Services\GameServices\SwordService\SwordService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Services\ServiceInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Services\ServiceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="README.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Services\EngineServices\CallService\Org.txt" />
+    <ClCompile Include="GameObjects\ARC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Asteroid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Cache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Laser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\SCOOP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\SWORD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\World.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\EngineServices\AudioService\AudioService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\EngineServices\CallService\CallService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\EngineServices\InputService\InputService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\EngineServices\PhysicsService\Body.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\EngineServices\PhysicsService\Bounds.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\EngineServices\PhysicsService\PhysicsService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\EngineServices\RenderService\RenderService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\EngineServices\ResourceService\ResourceService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\GameServices\AsteroidService\AsteroidService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\GameServices\PoolService\PoolService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\GameServices\SwordService\SwordService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\ServiceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootstrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

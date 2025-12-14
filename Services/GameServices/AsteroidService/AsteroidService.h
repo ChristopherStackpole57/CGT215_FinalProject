@@ -3,9 +3,16 @@
 #ifndef ASTEROID_SERVICE_H
 #define ASTEROID_SERVICE_H
 
+#include <algorithm>
+#include <cstdlib>
+#include <ctime>
 #include <vector>
 
 #include "Services/ServiceInterface.h"
+
+#include "RenderService.h"
+
+#include "Services/GameServices/PoolService/PoolService.h"
 
 #include "GameObjects/Asteroid.h"
 
@@ -15,9 +22,9 @@ public:
 	void Start() override;
 	void Shutdown() override;
 	void Tick(float dt) override;
-
 private:
-	std::vector<Asteroid*> asteroids;
+	int chance = 10000;
+	float asteroid_speed = 100.f;
 };
 
 #endif

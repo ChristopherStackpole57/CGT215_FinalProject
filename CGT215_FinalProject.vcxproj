@@ -127,63 +127,73 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Services\GameServices\AsteroidService\AsteroidService.cpp" />
-    <ClCompile Include="GameObjects\Cache.cpp" />
-    <ClCompile Include="GameObjects\Asteroid.cpp" />
-    <ClCompile Include="GameObjects\Laser.cpp" />
-    <ClCompile Include="GameObjects\ARC.cpp" />
-    <ClCompile Include="GameObjects\SCOOP.cpp" />
-    <ClCompile Include="Services\GameServices\PoolService\PoolService.cpp" />
-    <ClCompile Include="Services\EngineServices\ResourceService\ResourceService.cpp" />
-    <ClCompile Include="Services\ServiceManager.cpp" />
-    <ClCompile Include="Services\EngineServices\CallService\CallService.cpp" />
-    <ClCompile Include="Services\EngineServices\AudioService\AudioService.cpp" />
-    <ClCompile Include="bootstrapper.cpp" />
-    <ClCompile Include="Services\EngineServices\RenderService\RenderService.cpp" />
-    <ClCompile Include="Services\EngineServices\InputService\InputService.cpp" />
-    <ClCompile Include="GameObjects\World.cpp" />
-    <ClCompile Include="GameObjects\SWORD.cpp" />
-    <ClCompile Include="Services\GameServices\SwordService\SwordService.cpp" />
+    <None Include="README.md">
+      <SubType>
+      </SubType>
+    </None>
+    <None Include="SFPhysics\packages.config" />
+    <None Include="SFPhysics\SFPhysics.vcxproj" />
+    <None Include="SFPhysics\SFPhysics.vcxproj.filters" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Forwards\GameServices.h" />
-    <ClInclude Include="Services\GameServices\PoolService\ObjectPool.h" />
-    <ClInclude Include="Services\GameServices\AsteroidService\AsteroidService.h" />
-    <ClInclude Include="GameObjects\Cache.h" />
-    <ClInclude Include="GameObjects\Asteroid.h" />
-    <ClInclude Include="GameObjects\Laser.h" />
+    <Text Include="Services\EngineServices\CallService\Org.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="Forwards\CallService.h" />
+    <ClInclude Include="Forwards\GameServices.h" />
     <ClInclude Include="Forwards\InputService.h" />
+    <ClInclude Include="Forwards\PhysicsService.h" />
     <ClInclude Include="Forwards\RenderService.h" />
     <ClInclude Include="Forwards\ResourceService.h" />
     <ClInclude Include="Forwards\ServiceControl.h" />
     <ClInclude Include="Forwards\Services.h" />
     <ClInclude Include="GameObjects\ARC.h" />
+    <ClInclude Include="GameObjects\Asteroid.h" />
+    <ClInclude Include="GameObjects\Cache.h" />
     <ClInclude Include="GameObjects\GameObjectInterface.h" />
+    <ClInclude Include="GameObjects\Laser.h" />
     <ClInclude Include="GameObjects\SCOOP.h" />
-    <ClInclude Include="Services\GameServices\PoolService\ObjectPoolInterface.h" />
-    <ClInclude Include="Services\GameServices\PoolService\PoolService.h" />
-    <ClInclude Include="Services\EngineServices\RenderService\RenderObject.h" />
-    <ClInclude Include="Services\EngineServices\ResourceService\ResourceService.h" />
+    <ClInclude Include="GameObjects\SWORD.h" />
+    <ClInclude Include="GameObjects\World.h" />
+    <ClInclude Include="Services\EngineServices\AudioService\AudioService.h" />
     <ClInclude Include="Services\EngineServices\CallService\CallOrder.h" />
     <ClInclude Include="Services\EngineServices\CallService\CallService.h" />
-    <ClInclude Include="Services\EngineServices\AudioService\AudioService.h" />
-    <ClInclude Include="Services\EngineServices\RenderService\RenderService.h" />
     <ClInclude Include="Services\EngineServices\InputService\InputService.h" />
+    <ClInclude Include="Services\EngineServices\PhysicsService\Body.h" />
+    <ClInclude Include="Services\EngineServices\PhysicsService\Bounds.h" />
+    <ClInclude Include="Services\EngineServices\PhysicsService\PhysicsService.h" />
+    <ClInclude Include="Services\EngineServices\RenderService\RenderObject.h" />
+    <ClInclude Include="Services\EngineServices\RenderService\RenderService.h" />
+    <ClInclude Include="Services\EngineServices\ResourceService\ResourceService.h" />
+    <ClInclude Include="Services\GameServices\AsteroidService\AsteroidService.h" />
+    <ClInclude Include="Services\GameServices\PoolService\ObjectPool.h" />
+    <ClInclude Include="Services\GameServices\PoolService\ObjectPoolInterface.h" />
+    <ClInclude Include="Services\GameServices\PoolService\PoolService.h" />
+    <ClInclude Include="Services\GameServices\SwordService\SwordService.h" />
     <ClInclude Include="Services\ServiceInterface.h" />
     <ClInclude Include="Services\ServiceManager.h" />
-    <ClInclude Include="GameObjects\World.h" />
-    <ClInclude Include="GameObjects\SWORD.h" />
-    <ClInclude Include="Services\GameServices\SwordService\SwordService.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="README.md">
-      <SubType>
-      </SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Services\EngineServices\CallService\Org.txt" />
+    <ClCompile Include="bootstrapper.cpp" />
+    <ClCompile Include="GameObjects\ARC.cpp" />
+    <ClCompile Include="GameObjects\Asteroid.cpp" />
+    <ClCompile Include="GameObjects\Cache.cpp" />
+    <ClCompile Include="GameObjects\Laser.cpp" />
+    <ClCompile Include="GameObjects\SCOOP.cpp" />
+    <ClCompile Include="GameObjects\SWORD.cpp" />
+    <ClCompile Include="GameObjects\World.cpp" />
+    <ClCompile Include="Services\EngineServices\AudioService\AudioService.cpp" />
+    <ClCompile Include="Services\EngineServices\CallService\CallService.cpp" />
+    <ClCompile Include="Services\EngineServices\InputService\InputService.cpp" />
+    <ClCompile Include="Services\EngineServices\PhysicsService\Body.cpp" />
+    <ClCompile Include="Services\EngineServices\PhysicsService\Bounds.cpp" />
+    <ClCompile Include="Services\EngineServices\PhysicsService\PhysicsService.cpp" />
+    <ClCompile Include="Services\EngineServices\RenderService\RenderService.cpp" />
+    <ClCompile Include="Services\EngineServices\ResourceService\ResourceService.cpp" />
+    <ClCompile Include="Services\GameServices\AsteroidService\AsteroidService.cpp" />
+    <ClCompile Include="Services\GameServices\PoolService\PoolService.cpp" />
+    <ClCompile Include="Services\GameServices\SwordService\SwordService.cpp" />
+    <ClCompile Include="Services\ServiceManager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

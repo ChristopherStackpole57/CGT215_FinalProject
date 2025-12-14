@@ -20,6 +20,7 @@ public:
 
 	void SetPosition(sf::Vector2f position) override;
 	sf::Vector2f GetPosition() override;
+	sf::Vector2f GetSize() override;
 private:
 	std::unique_ptr<sf::Sprite> sprite;
 	std::string path = "Resources/scoop.bmp";

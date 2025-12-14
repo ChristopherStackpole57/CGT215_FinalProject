@@ -65,11 +65,14 @@ void ARC::Start()
 				Laser* laser = pool_service->Get<Laser>();
 				laser->SetPosition(
 					this->position + 
-					sf::Vector2f(0, -1 * this->sprite->getTextureRect().size.y).rotatedBy(
+					sf::Vector2f(0, -0.5 * this->sprite->getTextureRect().size.y).rotatedBy(
 						this->sprite->getRotation()
 					)
 				);
 				laser->SetRotation(this->sprite->getRotation());
+				laser->SetVelocity(sf::Vector2f(0, -500).rotatedBy(
+					this->sprite->getRotation()
+				));
 			}
 			else
 			{
@@ -128,6 +131,18 @@ void ARC::SetRotation(sf::Angle rotation)
 sf::Angle ARC::GetRotation()
 {
 	return sprite->getRotation();
+}
+sf::Vector2f ARC::GetSize()
+{
+	if (sprite)
+	{
+		sf::Vector2i size = sprite->getTextureRect().size;
+		return sf::Vector2f(
+			size.x,
+			size.y
+		);
+	}
+	return sf::Vector2f();
 }
 void ARC::Rotate(sf::Angle rotation)
 {

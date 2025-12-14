@@ -6,6 +6,7 @@
 
 #include "Services/EngineServices/CallService/CallService.h"
 
+// Service Behavior
 void ServiceManager::Start()
 {
 	// Ensure there is a call service that has been registered, otherwise throw an error.
@@ -14,12 +15,10 @@ void ServiceManager::Start()
 
 	call_service->Start();
 }
-
 void ServiceManager::Shutdown()
 {
 
 }
-
 void ServiceManager::Tick(float dt)
 {
 	CallService* call_service = Get<CallService>();
