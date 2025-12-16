@@ -18,10 +18,6 @@ void AsteroidService::Tick(float dt)
 	CallService* call_service = Services().Get<CallService>();
 
 	int decayed_chance = (int)(ASTEROID_SPAWN_CHANCE * std::exp(-1 * ASTEROID_SPAWN_DECAY_FACTOR * call_service->GetGameTime()));
-	if (decayed_chance % 100 == 0)
-	{
-		//std::cout << decayed_chance << std::endl;
-	}
 	int num = std::rand() % (decayed_chance + 1);
 	if (num == 1)
 	{ 

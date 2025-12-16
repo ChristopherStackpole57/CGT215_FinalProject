@@ -15,20 +15,25 @@ void ResourceService::Tick(float dt)
 
 }
 
-bool ResourceService::LoadResource(std::string& text, const std::string& path)
+bool ResourceService::LoadResource(sf::Font& font, const std::string& path)
 {
-	// TODO: Implement Text loading
-	return false;
-}
+	bool result = font.openFromFile(path);
+	if (!result)
+	{
+		std::cerr << "ResourceService: Encountered SFML Open Error: " << path << std::endl;
+		return false;
+	}
 
+	return true;
+}
 bool ResourceService::LoadResource(sf::Texture& texture, const std::string& path)
 {
 	// TODO: Add error handling
-	auto result = texture.loadFromFile(path);
+	bool result = texture.loadFromFile(path);
 
 	if (!result)
 	{
-		std::cerr << "ResourceService: Encountered SFML Load Error:" << result << std::endl;
+		std::cerr << "ResourceService: Encountered SFML Load Error:" << path << std::endl;
 		return false;
 	}
 
@@ -37,7 +42,6 @@ bool ResourceService::LoadResource(sf::Texture& texture, const std::string& path
 
 	return true;
 }
-
 bool ResourceService::LoadResource(sf::SoundBuffer& sound_buffer, const std::string& path)
 {
 	// TODO: Add error handling

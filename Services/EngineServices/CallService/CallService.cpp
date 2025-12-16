@@ -46,6 +46,8 @@ void CallService::Shutdown()
 }
 void CallService::Tick(float dt)
 {
+	dt = (paused) ? 0 : dt;
+
 	game_time += dt;
 
 	// Get tick priorities
@@ -100,4 +102,18 @@ void CallService::SetObjectTickPriority(IGameObject* game_object, int priority)
 {
 	// Add the provided service with to the object_tick_order CallOrder with the relevant priority
 	object_tick_order.Add(game_object, priority);
+}
+
+int CallService::GetGameTime()
+{
+	return game_time;
+}
+
+void CallService::Pause()
+{
+	paused = true;
+}
+void CallService::Unpause()
+{
+	paused = false;
 }

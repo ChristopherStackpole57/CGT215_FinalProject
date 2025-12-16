@@ -65,7 +65,7 @@ private:
 	}
 
 	// Overloads for resource loading
-	bool LoadResource(std::string& text, const std::string& path);
+	bool LoadResource(sf::Font& font, const std::string& path);
 	bool LoadResource(sf::Texture& texure, const std::string& path);
 	bool LoadResource(sf::SoundBuffer& sound_buffer, const std::string& path);
 };

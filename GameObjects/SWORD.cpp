@@ -179,7 +179,6 @@ void SWORD::Hit(float damage)
 	health -= damage;
 	if (health <= 0)
 	{
-		std::cout << "kill sword" << std::endl;
 		Services().Get<PoolService>()->Release(this);
 		Services().Get<SwordService>()->UpdateSwordPositions();
 	}

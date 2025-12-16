@@ -26,6 +26,10 @@ private:
 	std::unique_ptr<sf::Sprite> sprite;
 	std::string path = "Resources/planet.bmp";
 
+	RenderObject game_over_object;
+	std::unique_ptr<sf::Text> game_over_text;
+	std::string font_path = "Resources/ARIALBI.TTF";
+
 	float health = 100.f;
 };
 

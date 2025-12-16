@@ -100,7 +100,7 @@ void Asteroid::Tick(float dt)
 	sprite->setPosition(body->GetPosition());
 
 	// Rotate a little bit
-	sprite->rotate(sf::Angle(sf::degrees(0.01)));
+	sprite->rotate(sf::Angle(sf::degrees(0.02 * dt)));
 }
 
 // Asteroid Behavior

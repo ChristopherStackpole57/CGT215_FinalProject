@@ -30,7 +30,6 @@ void SwordService::Start()
 			float cost = SWORD_COST + (SWORD_COST * SWORD_COUNT_COST_GROWTH * count);
 			if (ore < cost)
 			{
-				std::cout << "required: " << cost << ", have: " << ore << std::endl;
 				return;
 			}
 
@@ -60,7 +59,6 @@ void SwordService::Start()
 				this->damage_modifier += SWORD_UPGRADE_INCREMENT_DAMAGE;
 				return;
 			}
-			std::cout << "insufficient ore, requires: " << upgrade_cost << ", have: " << ore << std::endl;
 		}
 	);
 	input_service->RegisterInputListener(UPGRADE_SWORD_FIRERATE,
@@ -76,7 +74,6 @@ void SwordService::Start()
 				this->firerate_modifier += SWORD_UPGRADE_INCREMENT_FIRERATE;
 				return;
 			}
-			std::cout << "requires: " << upgrade_cost << ", have: " << ore << std::endl;
 		}
 	);
 }

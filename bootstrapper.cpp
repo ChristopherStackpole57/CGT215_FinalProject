@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
+#include <memory>
 
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
@@ -100,17 +101,18 @@ int main()
 	RegisterGameServices();
 	SetGameRunPriorities();
 
+	// Obtain pointers to services
+	CallService* call_service = Services().Get<CallService>();
+	InputService* input_service = Services().Get<InputService>();
+	RenderService* render_service = Services().Get<RenderService>();
+	ResourceService* resource_service = Services().Get<ResourceService>();
+
 	// Build Game Map
 	World world;
 	world.SetPosition(sf::Vector2f(HALF_WIDTH, HALF_HEIGHT));
 
 	ARC arc;
 	arc.SetPosition(sf::Vector2f(HALF_WIDTH, HALF_HEIGHT - 15));
-
-	// Obtain pointers to services
-	CallService* call_service = Services().Get<CallService>();
-	InputService* input_service = Services().Get<InputService>();
-	RenderService* render_service = Services().Get<RenderService>();
 
 	// Tell Service Manager to run start on all services, this kicks off proper game execution
 	Services().Start();

@@ -33,9 +33,25 @@ void World::Start()
 	// Update physics body collider
 	if (body)
 	{
-		std::cout << "set world body collider " << std::endl;
 		body->SetCollider(Circle{ (float)texture_size.x / 2.f });
 	}
+
+	// Create game over screen
+	sf::Font& font = resource_service->Load<sf::Font>(font_path);
+	game_over_text = std::make_unique<sf::Text>(font, "Game Over", 145);
+	game_over_text->setFillColor({ 200, 100, 100, 255});
+
+	sf::Vector2f size = game_over_text->getLocalBounds().size;
+	game_over_text->setOrigin(size / 2.f);
+
+	sf::Vector2u screen_size = render_service->GetWindowSize();
+	game_over_text->move(sf::Vector2f{ screen_size.x / 2.f, screen_size.y / 2.f - 170.f});
+
+	game_over_object.drawable = game_over_text.get();
+	game_over_object.layer = 1;
+	game_over_object.active = false;
+
+	render_service->RegisterRenderObject(game_over_object);
 }
 void World::Shutdown()
 {
@@ -84,6 +100,9 @@ void World::Hit(float damage)
 	health -= damage;
 	if (health <= 0)
 	{
-		std::cout << "game over" << std::endl;
+		game_over_object.active = true;
+
+		CallService* call_service = Services().Get<CallService>();
+		call_service->Pause();
 	}
 }

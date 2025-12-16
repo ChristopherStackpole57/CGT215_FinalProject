@@ -2,32 +2,32 @@
 
 ## Brief Outline
 
-World ->
-Asteroids ->
-ARC ->
-Lasers ->
-SWORDs ->
+World -> \
+Asteroids -> \
+ARC -> \
+Lasers -> \
+SWORDs -> \
 
 ## How To Play
 
-A -> Turn Counter Clockwise
-D -> Turn Clockwise
+A -> Turn Counter Clockwise \
+D -> Turn Clockwise \
 
-W -> Shoot Laser
+W -> Shoot Laser \
 
-Q -> Spawn new SWORD
-Z -> Upgrade SWORD Damage
-X -> Upgrade SWORD Fire Rate
+Q -> Spawn new SWORD \
+Z -> Upgrade SWORD Damage \ 
+X -> Upgrade SWORD Fire Rate \
 
 Controls are set by constexpr in InputService.h if they need to be changed
 
 ## Some Important Notes
 
 ## Slight Post Mortem Analysis
-top level design was pretty solid (service architecture etc.)
-design got worse towards the end of the project (ran out of time)
-plenty of things i ran into that i wasnt expecting so i didnt have a good design pre planned
-lots of inconsistencies in how i approach object lifecycle management
+top level design was pretty solid (service architecture etc.) \
+design got worse towards the end of the project (ran out of time) \
+plenty of things i ran into that i wasnt expecting so i didnt have a good design pre planned \
+lots of inconsistencies in how i approach object lifecycle management \
 
 A Different Header Style
 ========================
@@ -35,9 +35,9 @@ i should probably remove scoops and caches because im not going to implement the
 
 ## todo
 by importance:
-- game over
 - SWORD aiming
 - world health bar
+- create dedicated release build
 
 ## personal; notes
 

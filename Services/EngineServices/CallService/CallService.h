@@ -23,10 +23,10 @@ public:
 	void SetObjectStartupPriority(IGameObject* game_object, int priority);
 	void SetObjectTickPriority(IGameObject* game_object, int priority);
 
-	int GetGameTime()
-	{
-		return game_time;
-	}
+	int GetGameTime();
+
+	void Pause();
+	void Unpause();
 private:
 	CallOrder<IService*> service_startup_order;
 	CallOrder<IService*> service_tick_order;
@@ -34,6 +34,7 @@ private:
 	CallOrder<IGameObject*> object_startup_order;
 	CallOrder<IGameObject*> object_tick_order;
 
+	bool paused = false;
 	int game_time = 0;								// Simple accumulation of the number of ms the game has been running
 };
 

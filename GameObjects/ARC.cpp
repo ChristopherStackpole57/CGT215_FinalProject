@@ -77,8 +77,7 @@ void ARC::Start()
 			}
 			else
 			{
-				// TODO: Play "Can't Shoot" sound
-				std::cout << "on cooldown" << std::endl;
+				// TODO: Add click sound
 			}
 		};
 
