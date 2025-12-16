@@ -17,7 +17,7 @@
 #include "GameObjects/Asteroid.h"
 
 constexpr float SWORD_BASE_HEALTH = 25.f;
-constexpr float SWORD_BASE_FIRERATE = 20.f;
+constexpr float SWORD_BASE_FIRERATE = 1.f;
 constexpr float SWORD_SPRITE_SCALE = 0.25f;
 
 class SWORD : public IGameObject

@@ -27,7 +27,7 @@ public:
 	std::vector<Asteroid*> GetAsteroids();
 private:
 	int chance = 10000;
-	float decay_factor = 0.0001;
+	float decay_factor = 0.00001;
 	float asteroid_speed = 100.f;
 
 	// Using a set to enforce uniqueness, as these are asteroid references are fetched from pool service

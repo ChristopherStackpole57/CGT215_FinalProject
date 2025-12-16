@@ -8,7 +8,7 @@
 
 #include "GameObjects/GameObjectInterface.h"
 
-constexpr float LASER_DAMAGE_SWORD = 5.f;
+constexpr float LASER_DAMAGE_SWORD = 2.5f;
 constexpr float LASER_DAMAGE_ARC = 50.f;
 constexpr float LASER_SPEED = 500.f;
 

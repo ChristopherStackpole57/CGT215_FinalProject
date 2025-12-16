@@ -6,7 +6,7 @@
 
 void SwordService::Start()
 {
-	// Bind Callback to create starts
+	// Bind Callback to create swords
 	InputService* input_service = Services().Get<InputService>();
 	input_service->RegisterInputListener(SPAWN_SWORD,
 		[this]()
@@ -27,6 +27,40 @@ void SwordService::Start()
 			swords.insert(sword);
 
 			this->UpdateSwordPositions();
+		}
+	);
+
+	// Bind upgrade callbacks
+	input_service->RegisterInputListener(UPRGRADE_SWORD_DAMAGE,
+		[this]()
+		{
+			// Calculate cost of upgrade
+			int num_upgrades = (this->damage_modifier - SWORD_BASE_MODIFIER_DAMAGE) / SWORD_UPGRADE_INCREMENT_DAMAGE;
+			float upgrade_cost = SWORD_UPGRADE_BASE_DAMAGE_COST + SWORD_UPGRADE_COST_GROWTH * num_upgrades;
+
+			if (ore >= upgrade_cost)
+			{
+				ore -= upgrade_cost;
+				this->damage_modifier += SWORD_UPGRADE_INCREMENT_DAMAGE;
+				return;
+			}
+			std::cout << "insufficient ore, requires: " << upgrade_cost << ", have: " << ore << std::endl;
+		}
+	);
+	input_service->RegisterInputListener(UPGRADE_SWORD_FIRERATE,
+		[this]()
+		{
+			// Calculate cost of upgrade
+			int num_upgrades = (this->firerate_modifier - SWORD_BASE_MODIFIER_FIRERATE) / SWORD_UPGRADE_INCREMENT_FIRERATE;
+			float upgrade_cost = SWORD_UPGRADE_BASE_FIRERATE_COST + SWORD_UPGRADE_COST_GROWTH * num_upgrades;
+
+			if (ore >= upgrade_cost)
+			{
+				ore -= upgrade_cost;
+				this->firerate_modifier += SWORD_UPGRADE_INCREMENT_FIRERATE;
+				return;
+			}
+			std::cout << "requires: " << upgrade_cost << ", have: " << ore << std::endl;
 		}
 	);
 }
@@ -73,4 +107,12 @@ void SwordService::UpdateSwordPositions()
 		
 		index++;
 	}
+}
+float SwordService::GetDamageModifier()
+{
+	return damage_modifier;
+}
+float SwordService::GetFirerateModifier()
+{
+	return firerate_modifier;
 }

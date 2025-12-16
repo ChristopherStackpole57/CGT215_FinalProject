@@ -51,12 +51,17 @@ void SWORD::Shutdown()
 }
 void SWORD::Tick(float dt)
 {
+	if (!active)
+	{
+		return;
+	}
+
 	// Determine whether or not the SWORD can fire this frame
 	CallService* call_service = Services().Get<CallService>();
 	if (debounce)
 	{
 		int curr_time = call_service->GetGameTime();
-		if ((curr_time - shot_time) >= (1000.f / fire_rate))
+		if ((curr_time - shot_time) >= (1000.f / (fire_rate * Services().Get<SwordService>()->GetFirerateModifier())))
 		{
 			debounce = false;
 		}
@@ -120,7 +125,7 @@ void SWORD::Tick(float dt)
 		std::atan2(aim.y, aim.x) + 3.141592 / 2
 	)));
 	laser->SetVelocity(aim.normalized() * LASER_SPEED);
-	laser->SetDamage(LASER_DAMAGE_SWORD);
+	laser->SetDamage(LASER_DAMAGE_SWORD * Services().Get<SwordService>()->GetDamageModifier());
 }
 
 // SWORD Behavior
