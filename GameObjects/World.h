@@ -7,6 +7,8 @@
 
 #include "GameObjects/GameObjectInterface.h"
 
+constexpr float WORLD_BASE_HEALTH = 100.f;
+
 class World : public IGameObject
 {
 public:
@@ -30,7 +32,21 @@ private:
 	std::unique_ptr<sf::Text> game_over_text;
 	std::string font_path = "Resources/ARIALBI.TTF";
 
-	float health = 100.f;
+	RenderObject health_background;
+	RenderObject health_frame;
+	RenderObject health_slider;
+
+	std::unique_ptr<sf::Sprite> background_sprite;
+	std::unique_ptr<sf::Sprite> frame_sprite;
+	std::unique_ptr<sf::Sprite> slider_sprite;
+
+	std::string background_path = "Resources/healthbar_background.bmp";
+	std::string frame_path = "Resources/healthbar_frame.bmp";
+	std::string slider_path = "Resources/healthbar_slider.bmp";
+
+	float slider_base_posx;
+
+	float health = WORLD_BASE_HEALTH;
 };
 
 #endif

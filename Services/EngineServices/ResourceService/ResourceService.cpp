@@ -42,8 +42,3 @@ bool ResourceService::LoadResource(sf::Texture& texture, const std::string& path
 
 	return true;
 }
-bool ResourceService::LoadResource(sf::SoundBuffer& sound_buffer, const std::string& path)
-{
-	// TODO: Add error handling
-	return sound_buffer.loadFromFile(path);
-}

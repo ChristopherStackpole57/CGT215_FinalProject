@@ -11,7 +11,6 @@
 
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
-#include <SFML/Audio.hpp>
 
 #include "Services/ServiceInterface.h"
 
@@ -67,7 +66,6 @@ private:
 	// Overloads for resource loading
 	bool LoadResource(sf::Font& font, const std::string& path);
 	bool LoadResource(sf::Texture& texure, const std::string& path);
-	bool LoadResource(sf::SoundBuffer& sound_buffer, const std::string& path);
 };
 
 #endif

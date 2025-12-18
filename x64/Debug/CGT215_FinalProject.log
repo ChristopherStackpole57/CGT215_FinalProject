@@ -1,4 +1,12 @@
-﻿  ARC.cpp
+﻿  bootstrapper.cpp
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\GameServices\AsteroidService\AsteroidService.h(20,45): warning C4305: 'initializing': truncation from 'double' to 'const float'
+  (compiling source file 'bootstrapper.cpp')
+  
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SWORD.h(45,18): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'bootstrapper.cpp')
+  
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\bootstrapper.cpp(153,29): warning C4244: 'argument': conversion from '__int64' to 'float', possible loss of data
+  ARC.cpp
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\GameServices\AsteroidService\AsteroidService.h(20,45): warning C4305: 'initializing': truncation from 'double' to 'const float'
   (compiling source file 'GameObjects/ARC.cpp')
   
@@ -25,6 +33,74 @@ C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObj
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\ARC.cpp(141,8): warning C4244:         [
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\ARC.cpp(141,8): warning C4244:             T=float
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\ARC.cpp(141,8): warning C4244:         ]
+  Asteroid.cpp
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\GameServices\AsteroidService\AsteroidService.h(20,45): warning C4305: 'initializing': truncation from 'double' to 'const float'
+  (compiling source file 'GameObjects/Asteroid.cpp')
+  
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SWORD.h(45,18): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'GameObjects/Asteroid.cpp')
+  
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(103,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(131,8): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(131,8): warning C4244:         with
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(131,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(131,8): warning C4244:             T=int
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(131,8): warning C4244:         ]
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(131,8): warning C4244:         and
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(131,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(131,8): warning C4244:             T=float
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(131,8): warning C4244:         ]
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(130,8): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(130,8): warning C4244:         with
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(130,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(130,8): warning C4244:             T=int
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(130,8): warning C4244:         ]
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(130,8): warning C4244:         and
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(130,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(130,8): warning C4244:             T=float
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Asteroid.cpp(130,8): warning C4244:         ]
+  Cache.cpp
+  Laser.cpp
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\GameServices\AsteroidService\AsteroidService.h(20,45): warning C4305: 'initializing': truncation from 'double' to 'const float'
+  (compiling source file 'GameObjects/Laser.cpp')
+  
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Laser.cpp(92,8): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Laser.cpp(92,8): warning C4244:         with
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Laser.cpp(92,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Laser.cpp(92,8): warning C4244:             T=int
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Laser.cpp(92,8): warning C4244:         ]
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Laser.cpp(92,8): warning C4244:         and
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Laser.cpp(92,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Laser.cpp(92,8): warning C4244:             T=float
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Laser.cpp(92,8): warning C4244:         ]
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Laser.cpp(91,8): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Laser.cpp(91,8): warning C4244:         with
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Laser.cpp(91,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Laser.cpp(91,8): warning C4244:             T=int
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Laser.cpp(91,8): warning C4244:         ]
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Laser.cpp(91,8): warning C4244:         and
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Laser.cpp(91,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Laser.cpp(91,8): warning C4244:             T=float
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\Laser.cpp(91,8): warning C4244:         ]
+  SCOOP.cpp
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SCOOP.cpp(66,8): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SCOOP.cpp(66,8): warning C4244:         with
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SCOOP.cpp(66,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SCOOP.cpp(66,8): warning C4244:             T=int
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SCOOP.cpp(66,8): warning C4244:         ]
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SCOOP.cpp(66,8): warning C4244:         and
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SCOOP.cpp(66,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SCOOP.cpp(66,8): warning C4244:             T=float
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SCOOP.cpp(66,8): warning C4244:         ]
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SCOOP.cpp(65,8): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SCOOP.cpp(65,8): warning C4244:         with
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SCOOP.cpp(65,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SCOOP.cpp(65,8): warning C4244:             T=int
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SCOOP.cpp(65,8): warning C4244:         ]
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SCOOP.cpp(65,8): warning C4244:         and
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SCOOP.cpp(65,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SCOOP.cpp(65,8): warning C4244:             T=float
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SCOOP.cpp(65,8): warning C4244:         ]
   SWORD.cpp
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\GameServices\AsteroidService\AsteroidService.h(20,45): warning C4305: 'initializing': truncation from 'double' to 'const float'
   (compiling source file 'GameObjects/SWORD.cpp')
@@ -52,24 +128,34 @@ C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObj
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SWORD.cpp(170,8): warning C4244:             T=float
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\SWORD.cpp(170,8): warning C4244:         ]
   World.cpp
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(92,8): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(92,8): warning C4244:         with
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(92,8): warning C4244:         [
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(92,8): warning C4244:             T=int
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(92,8): warning C4244:         ]
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(92,8): warning C4244:         and
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(92,8): warning C4244:         [
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(92,8): warning C4244:             T=float
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(92,8): warning C4244:         ]
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(91,8): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(91,8): warning C4244:         with
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(91,8): warning C4244:         [
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(91,8): warning C4244:             T=int
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(91,8): warning C4244:         ]
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(91,8): warning C4244:         and
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(91,8): warning C4244:         [
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(91,8): warning C4244:             T=float
-C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(91,8): warning C4244:         ]
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(124,8): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(124,8): warning C4244:         with
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(124,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(124,8): warning C4244:             T=int
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(124,8): warning C4244:         ]
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(124,8): warning C4244:         and
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(124,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(124,8): warning C4244:             T=float
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(124,8): warning C4244:         ]
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(123,8): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(123,8): warning C4244:         with
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(123,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(123,8): warning C4244:             T=int
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(123,8): warning C4244:         ]
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(123,8): warning C4244:         and
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(123,8): warning C4244:         [
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(123,8): warning C4244:             T=float
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\World.cpp(123,8): warning C4244:         ]
+  CallService.cpp
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\EngineServices\CallService\CallService.cpp(30,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\EngineServices\CallService\CallService.cpp(51,15): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\EngineServices\CallService\CallService.cpp(61,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  InputService.cpp
+  Body.cpp
+  OverlapFunctions.h
+  PhysicsService.cpp
+  RenderService.cpp
+  ResourceService.cpp
   AsteroidService.cpp
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\GameServices\AsteroidService\AsteroidService.h(20,45): warning C4305: 'initializing': truncation from 'double' to 'const float'
   (compiling source file 'Services/GameServices/AsteroidService/AsteroidService.cpp')
@@ -108,6 +194,7 @@ C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Service
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\GameServices\AsteroidService\AsteroidService.cpp(52,39): warning C4244:         [
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\GameServices\AsteroidService\AsteroidService.cpp(52,39): warning C4244:             T=float
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\GameServices\AsteroidService\AsteroidService.cpp(52,39): warning C4244:         ]
+  PoolService.cpp
   SwordService.cpp
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\GameServices\AsteroidService\AsteroidService.h(20,45): warning C4305: 'initializing': truncation from 'double' to 'const float'
   (compiling source file 'Services/GameServices/SwordService/SwordService.cpp')
@@ -119,8 +206,15 @@ C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Service
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\GameServices\SwordService\SwordService.cpp(68,21): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\GameServices\SwordService\SwordService.cpp(104,19): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\GameServices\SwordService\SwordService.cpp(110,74): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  ServiceManager.cpp
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\ServiceManager.cpp(14,2): warning C4002: too many arguments for function-like macro invocation 'assert'
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Services\ServiceManager.cpp(25,2): warning C4002: too many arguments for function-like macro invocation 'assert'
   Generating Code...
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\GameObjectInterface.h(36,1): warning C4715: 'IGameObject::GetVelocity': not all control paths return a value
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\GameObjectInterface.h(36,1): warning C4715: 'IGameObject::GetVelocity': not all control paths return a value
 C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\GameObjectInterface.h(36,1): warning C4715: 'IGameObject::GetVelocity': not all control paths return a value
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\GameObjectInterface.h(36,1): warning C4715: 'IGameObject::GetVelocity': not all control paths return a value
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\GameObjectInterface.h(36,1): warning C4715: 'IGameObject::GetVelocity': not all control paths return a value
+C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\GameObjects\GameObjectInterface.h(36,1): warning C4715: 'IGameObject::GetVelocity': not all control paths return a value
+  LINK : C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\x64\Debug\CGT215_FinalProject.exe not found or not built by the last incremental link; performing full link
   CGT215_FinalProject.vcxproj -> C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\x64\Debug\CGT215_FinalProject.exe

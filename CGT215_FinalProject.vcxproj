@@ -44,7 +44,7 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
-    <EnableASAN>true</EnableASAN>
+    <EnableASAN>false</EnableASAN>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -52,6 +52,7 @@
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <EnableASAN>false</EnableASAN>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -109,7 +110,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>sfml-main.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-main.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Programming\Libraries\Cpp\SFML-3.0.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -121,10 +122,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Programming\Libraries\Cpp\SFML-3.0.2\include;C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject;C:\Programming\Projects\Cpp\VS22\CGT215_FinalProject\CGT215_FinalProject\Forwards;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sfml-main.lib;sfml-window.lib;sfml-graphics.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Programming\Libraries\Cpp\SFML-3.0.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -135,6 +140,9 @@
     <None Include="SFPhysics\packages.config" />
     <None Include="SFPhysics\SFPhysics.vcxproj" />
     <None Include="SFPhysics\SFPhysics.vcxproj.filters" />
+    <None Include="x64\Release\sfml-graphics-3.dll" />
+    <None Include="x64\Release\sfml-system-3.dll" />
+    <None Include="x64\Release\sfml-window-3.dll" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Services\EngineServices\CallService\Org.txt" />
@@ -157,7 +165,6 @@
     <ClInclude Include="GameObjects\SCOOP.h" />
     <ClInclude Include="GameObjects\SWORD.h" />
     <ClInclude Include="GameObjects\World.h" />
-    <ClInclude Include="Services\EngineServices\AudioService\AudioService.h" />
     <ClInclude Include="Services\EngineServices\CallService\CallOrder.h" />
     <ClInclude Include="Services\EngineServices\CallService\CallService.h" />
     <ClInclude Include="Services\EngineServices\InputService\InputService.h" />
@@ -183,7 +190,6 @@
     <ClCompile Include="GameObjects\SCOOP.cpp" />
     <ClCompile Include="GameObjects\SWORD.cpp" />
     <ClCompile Include="GameObjects\World.cpp" />
-    <ClCompile Include="Services\EngineServices\AudioService\AudioService.cpp" />
     <ClCompile Include="Services\EngineServices\CallService\CallService.cpp" />
     <ClCompile Include="Services\EngineServices\InputService\InputService.cpp" />
     <ClCompile Include="Services\EngineServices\PhysicsService\Body.cpp" />
@@ -195,6 +201,23 @@
     <ClCompile Include="Services\GameServices\PoolService\PoolService.cpp" />
     <ClCompile Include="Services\GameServices\SwordService\SwordService.cpp" />
     <ClCompile Include="Services\ServiceManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Resources\ARIALBI.TTF" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\asteroid.bmp" />
+    <Image Include="Resources\cannon.bmp" />
+    <Image Include="Resources\healthbar_background.bmp" />
+    <Image Include="Resources\healthbar_frame.bmp" />
+    <Image Include="Resources\healthbar_slider.bmp" />
+    <Image Include="Resources\icon_damage.bmp" />
+    <Image Include="Resources\icon_firerate.bmp" />
+    <Image Include="Resources\icon_sword.bmp" />
+    <Image Include="Resources\laser.bmp" />
+    <Image Include="Resources\planet.bmp" />
+    <Image Include="Resources\scoop.bmp" />
+    <Image Include="Resources\sword.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
